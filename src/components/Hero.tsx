@@ -1,7 +1,60 @@
 
 import { ChevronDown, Brain, Code, Zap } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [currentDesignation, setCurrentDesignation] = useState('');
+  const [currentDesignationIndex, setCurrentDesignationIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  // Add your designations here
+  const designations = [
+    'Full Stack Developer',
+    'AI Engineer', 
+    'Tech Innovator',
+    'Software Engineer',
+    'Problem Solver'
+  ];
+
+  // Add your name here
+  const name = 'Your Name';
+
+  useEffect(() => {
+    const designation = designations[currentDesignationIndex];
+    let currentIndex = 0;
+
+    if (isTyping) {
+      const typingInterval = setInterval(() => {
+        if (currentIndex < designation.length) {
+          setCurrentDesignation(designation.slice(0, currentIndex + 1));
+          currentIndex++;
+        } else {
+          setIsTyping(false);
+          clearInterval(typingInterval);
+          // Wait 2 seconds before starting to delete
+          setTimeout(() => {
+            setIsTyping(false);
+          }, 2000);
+        }
+      }, 100);
+
+      return () => clearInterval(typingInterval);
+    } else {
+      // Deleting phase
+      const deletingInterval = setInterval(() => {
+        if (currentDesignation.length > 0) {
+          setCurrentDesignation(currentDesignation.slice(0, -1));
+        } else {
+          setCurrentDesignationIndex((prev) => (prev + 1) % designations.length);
+          setIsTyping(true);
+          clearInterval(deletingInterval);
+        }
+      }, 50);
+
+      return () => clearInterval(deletingInterval);
+    }
+  }, [currentDesignationIndex, isTyping, currentDesignation, designations]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
@@ -25,9 +78,12 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            <span className="gradient-text">AI Engineer</span>
+            <span className="gradient-text">{name}</span>
             <br />
-            <span className="text-foreground">& Tech Innovator</span>
+            <span className="text-foreground min-h-[1.2em] inline-block">
+              {currentDesignation}
+              <span className="animate-pulse">|</span>
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up delay-200">
