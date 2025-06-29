@@ -1,23 +1,37 @@
-
-import { ChevronDown, Brain, Code, Zap } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { ChevronDown, Brain, Code, Zap, Upload, User } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 const Hero = () => {
   const [currentDesignation, setCurrentDesignation] = useState('');
   const [currentDesignationIndex, setCurrentDesignationIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [profileImage, setProfileImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Add your designations here
+  // Updated designations as requested
   const designations = [
-    'Full Stack Developer',
-    'AI Engineer', 
-    'Tech Innovator',
-    'Software Engineer',
-    'Problem Solver'
+    'AI Engineer',
+    'Fitness Coach', 
+    'Stoic'
   ];
 
   // Add your name here
   const name = 'Your Name';
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setProfileImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const triggerFileInput = () => {
+    fileInputRef.current?.click();
+  };
 
   useEffect(() => {
     const designation = designations[currentDesignationIndex];
@@ -64,6 +78,38 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
+          {/* Profile Photo Section */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500/30 overflow-hidden cursor-pointer hover:border-purple-500/50 transition-all duration-300 glow-effect"
+                onClick={triggerFileInput}
+              >
+                {profileImage ? (
+                  <img 
+                    src={profileImage} 
+                    alt="Profile" 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center">
+                    <User className="w-16 h-16 md:w-20 md:h-20 text-purple-400" />
+                  </div>
+                )}
+              </div>
+              <div className="absolute bottom-2 right-2 bg-purple-500 rounded-full p-2 hover:bg-purple-600 transition-colors cursor-pointer">
+                <Upload className="w-4 h-4 text-white" />
+              </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="hidden"
+              />
+            </div>
+          </div>
+
           {/* Floating Icons */}
           <div className="flex justify-center space-x-8 mb-8">
             <div className="animate-float">
