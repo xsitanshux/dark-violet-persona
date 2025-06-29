@@ -23,10 +23,11 @@ const Hero = () => {
 
     if (isTyping) {
       const typingInterval = setInterval(() => {
-        if (currentIndex <= designation.length) {
-          setCurrentDesignation(designation.slice(0, currentIndex));
+        if (currentIndex < designation.length) {
+          setCurrentDesignation(designation.slice(0, currentIndex + 1));
           currentIndex++;
         } else {
+          // Fully typed, wait before starting to delete
           setIsTyping(false);
           clearInterval(typingInterval);
           // Wait 2 seconds before starting to delete
