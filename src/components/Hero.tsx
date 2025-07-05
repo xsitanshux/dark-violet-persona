@@ -62,13 +62,16 @@ function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           {/* Profile Photo Section */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500/30 overflow-hidden glow-effect">
-                <img 
-                  src="/lovable-uploads/2158c1fd-39a5-4035-aa89-476e2f83e66a.png" 
-                  alt="Profile" 
-                  className="w-full h-full object-cover"
-                />
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 via-pink-400 to-blue-400 rounded-full blur-2xl opacity-40"></div>
+              <div className="p-1 bg-gradient-to-tr from-purple-400 via-pink-400 to-blue-400 rounded-full">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+                  <img
+                    src="/lovable-uploads/2158c1fd-39a5-4035-aa89-476e2f83e66a.png"
+                    alt="Portrait of [Your Name]"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
               </div>
             </div>
           </div>
