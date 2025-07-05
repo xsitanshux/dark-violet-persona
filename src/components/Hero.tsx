@@ -32,7 +32,7 @@ const Hero = () => {
           clearInterval(typingInterval);
           setTimeout(() => {
             setIsTyping(false);
-          }, 2000); // Wait 2 seconds before deleting
+          }, 8000); // Wait 8 seconds before deleting
         }
       }, 100);
 
@@ -70,9 +70,11 @@ const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500/30 overflow-hidden glow-effect">
-                <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center">
-                  <User className="w-16 h-16 md:w-20 md:h-20 text-purple-400" />
-                </div>
+                <img 
+                  src="/lovable-uploads/2158c1fd-39a5-4035-aa89-476e2f83e66a.png" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
