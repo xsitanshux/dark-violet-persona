@@ -67,7 +67,7 @@ function Hero() {
                 <img 
                   src="/lovable-uploads/8573e28b-6825-4cbf-96b8-b74e950fc240.jpg" 
                   alt="Profile" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-center"
                 />
               </div>
             </div>
