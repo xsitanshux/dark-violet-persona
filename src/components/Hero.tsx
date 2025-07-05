@@ -63,7 +63,7 @@ function Hero() {
           {/* Profile Photo Section */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500/30 overflow-hidden glow-effect">
+              <div className="w-40 h-48 md:w-48 md:h-56 rounded-lg border-4 border-purple-500/30 overflow-hidden glow-effect">
                 <img 
                   src="/lovable-uploads/8573e28b-6825-4cbf-96b8-b74e950fc240.jpg" 
                   alt="Profile" 
