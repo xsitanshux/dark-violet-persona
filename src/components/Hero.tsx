@@ -15,7 +15,7 @@ function Hero() {
   ];
 
   // Add your name here
-  const name = 'Your Name';
+  const name = 'Sitanshu Boyini';
 
   useEffect(() => {
     const designation = designations[currentDesignationIndex];
