@@ -34,7 +34,7 @@ const Hero = () => {
             setIsTyping(false);
           }, 8000); // Wait 8 seconds before deleting
         }
-      }, 100);
+      }, 1000);
 
       return () => clearInterval(typingInterval);
     } else {
