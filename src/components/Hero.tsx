@@ -1,12 +1,12 @@
 
 import { ChevronDown, Brain, Code, Zap, User } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const Hero = () => {
+function Hero() {
   const [currentDesignation, setCurrentDesignation] = useState('');
   const [currentDesignationIndex, setCurrentDesignationIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-
+  const typingIndex = useRef(0);
   // Updated designations as requested
   const designations = [
     'AI Engineer',
@@ -21,30 +21,24 @@ const Hero = () => {
     const designation = designations[currentDesignationIndex];
 
     if (isTyping) {
-      // Typing phase
-      let currentIndex = 0;
+      typingIndex.current = 0;
       const typingInterval = setInterval(() => {
-        if (currentIndex < designation.length) {
-          setCurrentDesignation(designation.slice(0, currentIndex + 1));
-          currentIndex++;
+        if (typingIndex.current < designation.length) {
+          setCurrentDesignation(designation.slice(0, typingIndex.current + 1));
+          typingIndex.current++;
         } else {
-          // Fully typed, wait before starting to delete
           clearInterval(typingInterval);
-          setTimeout(() => {
-            setIsTyping(false);
-          }, 8000); // Wait 8 seconds before deleting
+          setTimeout(() => setIsTyping(false), 8000);
         }
       }, 100);
 
       return () => clearInterval(typingInterval);
     } else {
-      // Deleting phase
       const deletingInterval = setInterval(() => {
         setCurrentDesignation(prev => {
           if (prev.length > 0) {
             return prev.slice(0, -1);
           } else {
-            // Finished deleting, move to next designation
             clearInterval(deletingInterval);
             setCurrentDesignationIndex((prevIndex) => (prevIndex + 1) % designations.length);
             setIsTyping(true);
@@ -55,7 +49,7 @@ const Hero = () => {
 
       return () => clearInterval(deletingInterval);
     }
-  }, [currentDesignationIndex, isTyping, designations]);
+  }, [currentDesignationIndex, isTyping]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
