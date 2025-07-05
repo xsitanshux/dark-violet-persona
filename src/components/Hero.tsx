@@ -52,18 +52,18 @@ function Hero() {
   }, [currentDesignationIndex, isTyping]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-background to-background"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-32 right-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Profile Photo Section */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-12 flex justify-center">
             <div className="relative">
-              <div className="w-40 h-48 md:w-48 md:h-56 rounded-lg border-4 border-purple-500/30 overflow-hidden glow-effect">
+              <div className="w-36 h-44 md:w-44 md:h-52 rounded-lg border-4 border-purple-500/30 overflow-hidden glow-effect shadow-2xl">
                 <img 
                   src="/lovable-uploads/8573e28b-6825-4cbf-96b8-b74e950fc240.jpg" 
                   alt="Profile" 
