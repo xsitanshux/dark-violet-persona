@@ -19,21 +19,20 @@ const Hero = () => {
 
   useEffect(() => {
     const designation = designations[currentDesignationIndex];
-    let currentIndex = 0;
 
     if (isTyping) {
+      // Typing phase
+      let currentIndex = 0;
       const typingInterval = setInterval(() => {
         if (currentIndex < designation.length) {
           setCurrentDesignation(designation.slice(0, currentIndex + 1));
           currentIndex++;
         } else {
           // Fully typed, wait before starting to delete
-          setIsTyping(false);
           clearInterval(typingInterval);
-          // Wait 2 seconds before starting to delete
           setTimeout(() => {
             setIsTyping(false);
-          }, 2000);
+          }, 2000); // Wait 2 seconds before deleting
         }
       }, 100);
 
@@ -41,18 +40,22 @@ const Hero = () => {
     } else {
       // Deleting phase
       const deletingInterval = setInterval(() => {
-        if (currentDesignation.length > 0) {
-          setCurrentDesignation(prev => prev.slice(0, -1));
-        } else {
-          setCurrentDesignationIndex((prev) => (prev + 1) % designations.length);
-          setIsTyping(true);
-          clearInterval(deletingInterval);
-        }
+        setCurrentDesignation(prev => {
+          if (prev.length > 0) {
+            return prev.slice(0, -1);
+          } else {
+            // Finished deleting, move to next designation
+            clearInterval(deletingInterval);
+            setCurrentDesignationIndex((prevIndex) => (prevIndex + 1) % designations.length);
+            setIsTyping(true);
+            return '';
+          }
+        });
       }, 50);
 
       return () => clearInterval(deletingInterval);
     }
-  }, [currentDesignationIndex, isTyping, currentDesignation, designations]);
+  }, [currentDesignationIndex, isTyping, designations]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
