@@ -10,7 +10,7 @@ function Hero() {
   // Updated designations as requested
   const designations = [
     'AI Engineer',
-    'Fitness Coach', 
+    'Data Scientist', 
     'Stoic'
   ];
 
@@ -28,7 +28,7 @@ function Hero() {
           typingIndex.current++;
         } else {
           clearInterval(typingInterval);
-          setTimeout(() => setIsTyping(false), 8000);
+          setTimeout(() => setIsTyping(false), 2000);
         }
       }, 100);
 
