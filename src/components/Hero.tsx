@@ -11,7 +11,7 @@ function Hero() {
   const designations = [
     'I speak to machines more than humans',
     'But still get misunderstood', 
-    'Well atleast the machine learns'
+    'Well atleast the machine learns.'
   ];
 
   // Add your name here
@@ -30,7 +30,7 @@ function Hero() {
           clearInterval(typingInterval);
           setTimeout(() => setIsTyping(false), 1000);
         }
-      }, 80);
+      }, 75);
 
       return () => clearInterval(typingInterval);
     } else {
