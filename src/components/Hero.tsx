@@ -65,7 +65,7 @@ function Hero() {
             <div className="relative">
               <div className="w-80 h-96 md:w-96 md:h-[28rem] rounded-2xl border-4 border-purple-500/30 overflow-hidden glow-effect shadow-2xl">
                 <img 
-                  src="/lovable-uploads/1183c19e-0929-4743-951b-283d61bd9116.png" 
+                  src="/lovable-uploads/2158c1fd-39a5-4035-aa89-476e2f83e66a.png" 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
