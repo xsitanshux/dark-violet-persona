@@ -11,7 +11,7 @@ function Hero() {
   const designations = [
     'I speak to machines more than humans',
     'But still get misunderstood', 
-    'Well atleast the machine learns.'
+    'Well, atleast the machine learns.'
   ];
 
   // Add your name here
