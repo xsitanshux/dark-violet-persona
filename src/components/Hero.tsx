@@ -9,9 +9,9 @@ function Hero() {
   const typingIndex = useRef(0);
   // Updated designations as requested
   const designations = [
-    'AI Engineer',
-    'Data Scientist', 
-    'Stoic'
+    'I talk to machines more than people',
+    'But still get misunderstood', 
+    'But atleast the model learns'
   ];
 
   // Add your name here
