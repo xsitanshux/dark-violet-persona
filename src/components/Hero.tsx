@@ -45,7 +45,7 @@ function Hero() {
             return '';
           }
         });
-      }, 50);
+      }, 30);
 
       return () => clearInterval(deletingInterval);
     }
