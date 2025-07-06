@@ -28,7 +28,7 @@ function Hero() {
           typingIndex.current++;
         } else {
           clearInterval(typingInterval);
-          setTimeout(() => setIsTyping(false), 1000);
+          setTimeout(() => setIsTyping(false), 800);
         }
       }, 100);
 
