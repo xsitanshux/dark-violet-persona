@@ -9,9 +9,9 @@ function Hero() {
   const typingIndex = useRef(0);
   // Updated designations as requested
   const designations = [
-    'I talk to machines more than people',
+    'I speak to machines more than humans',
     'But still get misunderstood', 
-    'But atleast the model learns'
+    'Well atleast the machine learns'
   ];
 
   // Add your name here
