@@ -59,63 +59,69 @@ function Hero() {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Profile Photo Section */}
-          <div className="mb-12 flex justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Profile Photo Section - Large and Prominent */}
+          <div className="flex justify-center lg:justify-end order-2 lg:order-1">
             <div className="relative">
-              <div className="w-40 h-50 md:w-44 md:h-52 rounded-lg border-4 border-purple-500/30 overflow-hidden glow-effect shadow-2xl">
+              <div className="w-80 h-96 md:w-96 md:h-[28rem] rounded-2xl border-4 border-purple-500/30 overflow-hidden glow-effect shadow-2xl">
                 <img 
-                  src="/lovable-uploads/8573e28b-6825-4cbf-96b8-b74e950fc240.jpg" 
+                  src="/lovable-uploads/1183c19e-0929-4743-951b-283d61bd9116.png" 
                   alt="Profile" 
-                  className="w-full h-full object-contain bg-black"
+                  className="w-full h-full object-cover"
                 />
               </div>
+              {/* Decorative elements around the photo */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-500 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400 rounded-full animate-pulse delay-500"></div>
             </div>
           </div>
 
-          {/* Floating Icons */}
-          <div className="flex justify-center space-x-8 mb-8">
-            <div className="animate-float">
-              <Brain className="w-12 h-12 text-purple-400" />
-            </div>
-            <div className="animate-float delay-1000">
-              <Code className="w-12 h-12 text-purple-500" />
-            </div>
-            <div className="animate-float delay-2000">
-              <Zap className="w-12 h-12 text-purple-600" />
-            </div>
-          </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            <span className="gradient-text">{name}</span>
-            <br />
-            <span className="text-foreground min-h-[1.2em] inline-block">
-              {currentDesignation}
-              <span className="animate-pulse">|</span>
-            </span>
-          </h1>
-
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up delay-200">
-            Crafting intelligent solutions at the intersection of 
-            <span className="text-purple-400"> artificial intelligence</span> and 
-            <span className="text-purple-400"> cutting-edge technology</span>
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-400">
-            <a 
-              href="#projects" 
-              className="gradient-border"
-            >
-              <div className="bg-background px-8 py-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 glow-effect">
-                View My Work
+          {/* Text Content Section */}
+          <div className="text-center lg:text-left order-1 lg:order-2">
+            {/* Floating Icons */}
+            <div className="flex justify-center lg:justify-start space-x-8 mb-8">
+              <div className="animate-float">
+                <Brain className="w-12 h-12 text-purple-400" />
               </div>
-            </a>
-            <a 
-              href="#contact" 
-              className="px-8 py-3 text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              Get In Touch
-            </a>
+              <div className="animate-float delay-1000">
+                <Code className="w-12 h-12 text-purple-500" />
+              </div>
+              <div className="animate-float delay-2000">
+                <Zap className="w-12 h-12 text-purple-600" />
+              </div>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">
+              <span className="gradient-text">{name}</span>
+              <br />
+              <span className="text-foreground min-h-[1.2em] inline-block">
+                {currentDesignation}
+                <span className="animate-pulse">|</span>
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 animate-fade-in-up delay-200">
+              Crafting intelligent solutions at the intersection of 
+              <span className="text-purple-400"> artificial intelligence</span> and 
+              <span className="text-purple-400"> cutting-edge technology</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in-up delay-400">
+              <a 
+                href="#projects" 
+                className="gradient-border"
+              >
+                <div className="bg-background px-8 py-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 glow-effect">
+                  View My Work
+                </div>
+              </a>
+              <a 
+                href="#contact" 
+                className="px-8 py-3 text-muted-foreground hover:text-primary transition-colors duration-300"
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>
