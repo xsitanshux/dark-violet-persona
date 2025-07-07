@@ -19,15 +19,15 @@ const About = () => {
                     <h3 className="text-xl font-semibold">Personal Info</h3>
                   </div>
                   <div className="space-y-3 text-muted-foreground">
-                    <p><strong className="text-foreground">Name:</strong> [Your Name]</p>
-                    <p><strong className="text-foreground">Age:</strong> [Your Age]</p>
+                    <p><strong className="text-foreground">Name:</strong> Sitanshu Boyini </p>
+                    <p><strong className="text-foreground">Age:</strong> 23 </p>
                     <p className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2" />
-                      <strong className="text-foreground mr-2">Location:</strong> [Your Location]
+                      <strong className="text-foreground mr-2">Location:</strong> Hyderabad, Telangana
                     </p>
                     <p className="flex items-center">
                       <Mail className="w-4 h-4 mr-2" />
-                      <strong className="text-foreground mr-2">Email:</strong> [Your Email]
+                      <strong className="text-foreground mr-2">Email:</strong> sitanshu4work@gmail.com
                     </p>
                   </div>
                 </div>

@@ -44,15 +44,15 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 text-purple-400 mr-4" />
-                  <span className="text-muted-foreground">[your.email@example.com]</span>
+                  <span className="text-muted-foreground"> sitanshu4work@gmail.com </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 text-purple-400 mr-4" />
-                  <span className="text-muted-foreground">[+1 (555) 123-4567]</span>
+                  <span className="text-muted-foreground"> +91 8978645645 </span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-purple-400 mr-4" />
-                  <span className="text-muted-foreground">[Your City, Country]</span>
+                  <span className="text-muted-foreground"> Hyderabad, India </span>
                 </div>
               </div>
 
@@ -60,19 +60,19 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/xsitanshux" 
                     className="p-3 bg-card rounded-lg border border-purple-500/20 hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300 glow-effect"
                   >
                     <Github className="w-6 h-6 text-purple-400" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://in.linkedin.com/in/sitanshu-boyini-1b1064228?original_referer=https%3A%2F%2Fwww.google.com%2F" 
                     className="p-3 bg-card rounded-lg border border-purple-500/20 hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300 glow-effect"
                   >
                     <Linkedin className="w-6 h-6 text-purple-400" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://x.com/sitanshu_b?s=21&t=UZnJ58CqJbAnn8iZNaaQAg" 
                     className="p-3 bg-card rounded-lg border border-purple-500/20 hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300 glow-effect"
                   >
                     <Twitter className="w-6 h-6 text-purple-400" />

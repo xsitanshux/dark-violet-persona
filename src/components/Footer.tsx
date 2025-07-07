@@ -10,7 +10,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="gradient-text font-semibold">
-            Powered by AI & Creativity
+            Powered by Creativity
           </div>
         </div>
       </div>

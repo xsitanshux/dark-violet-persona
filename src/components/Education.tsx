@@ -4,19 +4,19 @@ import { GraduationCap, Calendar, Award } from 'lucide-react';
 const Education = () => {
   const education = [
     {
-      degree: "Master's in Artificial Intelligence",
-      institution: "[Your University]",
-      year: "2022-2024",
-      description: "Specialized in machine learning, deep learning, and neural networks. Thesis on advanced AI applications.",
-      grade: "GPA: 3.8/4.0"
+      degree: "BTech in Computer Science (AI, ML)",
+      institution: "JNTU, Hyderabad",
+      year: "December 2020 - 2024",
+      description: "Specialized in Artificial Intelligence and Machine Learning with relevant coursework in Machine Learning, Natural Language Processing, Deep Learning, Reinforcement Learning, Design and Analysis of Algorithms, and Cloud Computing. Completed prestigious internships at Karma Labs, Ozonetel Communications, and AidenAI, focusing on cutting-edge AI applications. Awarded for outstanding research on Generative Adversarial Networks (GANs). Speaker at the Global AI Summit in Hyderabad, where research and projects were showcased to an international audience."
     },
     {
-      degree: "Bachelor's in Computer Science",
-      institution: "[Your University]",
-      year: "2018-2022",
-      description: "Strong foundation in programming, algorithms, and software engineering with focus on AI electives.",
-      grade: "GPA: 3.7/4.0"
+      degree: "Primary and Secondary Schooling",
+      institution: "The Hyderabad Public School",
+      year: "2005 - 2019",
+      description: "Graduated with academic distinction while actively participating in Model United Nations conferences, representing global perspectives and winning accolades. Excelled in inter-school debates and public speaking competitions, developing strong oratory and critical thinking skills. Represented the school in regional sports tournaments and cultural fests, demonstrating leadership, teamwork, and a well-rounded personality.",
+      
     }
+
   ];
 
   const certifications = [
@@ -48,8 +48,8 @@ const Education = () => {
                       <div className="flex items-center text-muted-foreground mb-3">
                         <Calendar className="w-4 h-4 mr-2" />
                         <span>{edu.year}</span>
-                        <Award className="w-4 h-4 ml-4 mr-2" />
-                        <span>{edu.grade}</span>
+                      
+                        
                       </div>
                       <p className="text-muted-foreground">{edu.description}</p>
                     </div>
@@ -62,7 +62,7 @@ const Education = () => {
           <div className="gradient-border">
             <div className="bg-card p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 flex items-center">
-                <Award className="w-6 h-6 text-purple-400 mr-3" />
+                
                 Certifications
               </h3>
               <div className="grid md:grid-cols-2 gap-4">

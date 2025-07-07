@@ -4,41 +4,48 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior AI Engineer",
-      company: "[Current Company]",
-      location: "[Location]",
-      period: "2023 - Present",
+      title: "AI Engineer",
+      company: "AidenAI",
+      location: "Hyderabad, India",
+      period: "September 2024 - Present",
       description: [
-        "Lead development of machine learning models for production environments",
-        "Architect scalable AI infrastructure serving millions of users",
-        "Mentor junior engineers and conduct technical interviews",
-        "Collaborate with product teams to define AI strategy and roadmap"
+        "Designed and developed advanced AI applications including RAG systems, AI agents, and recommendation engines",
+        "Fine-tuned large language models for domain-specific tasks and performance optimization",
+        "Built intelligent retrieval-augmented generation (RAG) pipelines integrating vector databases and LLMs",
+        "Developed and deployed AI agents capable of autonomous task execution and contextual reasoning",
+        "Engineered robust APIs, integrated databases, and managed full-stack software infrastructure for AI systems",
+        "Led architectural planning and implementation of scalable, distributed microservices",
+        "Applied system design principles to ensure high availability, maintainability, and modularity of AI platforms"
       ]
     },
     {
-      title: "Machine Learning Engineer",
-      company: "[Previous Company]",
-      location: "[Location]",
-      period: "2021 - 2023",
+      title: "Machine Learning Intern",
+      company: "Ozonetel Communications",
+      location: "Hyderabad, India",
+      period: "September 2022 - December 2022",
       description: [
-        "Developed and deployed computer vision models for autonomous systems",
-        "Optimized model performance achieving 40% reduction in inference time",
-        "Built MLOps pipelines for continuous model training and deployment",
-        "Researched and implemented state-of-the-art deep learning techniques"
+        "Contributed to the design and implementation of Automated Speech Recognition (ASR) models for transcribing customer calls",
+        "Optimized ASR models to improve transcription accuracy and reduce error rates using domain-specific telephony data",
+        "Built NLP models for sentiment analysis from call transcripts and customer feedback",
+        "Developed dashboards to visualize sentiment trends, aiding customer service improvement",
+        "Enabled business teams to identify common issues and enhance customer experience using insights from sentiment analysis"
       ]
     },
     {
-      title: "AI Research Intern",
-      company: "[Research Lab/Company]",
-      location: "[Location]",
-      period: "2020 - 2021",
+      title: "Research Intern",
+      company: "Karma Labs",
+      location: "Bangalore, India",
+      period: "June 2022 - August 2022",
       description: [
-        "Conducted research on natural language processing and transformers",
-        "Published findings in peer-reviewed conferences",
-        "Collaborated with PhD researchers on cutting-edge AI projects",
-        "Prototyped novel algorithms for text understanding and generation"
+        "Conducted research on basic machine learning algorithms and their applications in IT solutions",
+        "Reviewed academic papers and industry articles to stay updated on ML trends and documented findings for team knowledge sharing",
+        "Designed and implemented ML models including linear regression, logistic regression, decision trees, and clustering algorithms",
+        "Developed clean, maintainable, and scalable code for training and testing ML models",
+        "Conducted exploratory data analysis (EDA) to identify patterns and relationships in data",
+        "Created data visualizations using Matplotlib, Seaborn, and Tableau to communicate key insights"
       ]
     }
+
   ];
 
   return (

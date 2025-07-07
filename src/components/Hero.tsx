@@ -65,7 +65,7 @@ function Hero() {
             <div className="relative">
               <div className="w-80 h-96 md:w-96 md:h-[28rem] rounded-2xl border-4 border-purple-500/30 overflow-hidden glow-effect shadow-2xl">
                 <img 
-                  src="/lovable-uploads/background-replacer-result.jpg" 
+                  src="/uploads/background-replacer-result.jpg" 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
@@ -94,10 +94,12 @@ function Hero() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">
               <span className="gradient-text">{name}</span>
               <br />
-              <span className="text-foreground min-h-[1.2em] inline-block">
-                {currentDesignation}
-                <span className="animate-pulse">|</span>
-              </span>
+              <div className="relative h-[2.5em] md:h-[3em] lg:h-[3.5em]">
+                <span className="text-foreground absolute top-0 left-0 w-full">
+                  {currentDesignation}
+                  <span className="animate-pulse">|</span>
+                </span>
+              </div>
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 animate-fade-in-up delay-200">
@@ -117,9 +119,11 @@ function Hero() {
               </a>
               <a 
                 href="#contact" 
-                className="px-8 py-3 text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="gradient-border"
               >
+                <div className="bg-background px-8 py-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 glow-effect">
                 Get In Touch
+                </div>
               </a>
             </div>
           </div>
