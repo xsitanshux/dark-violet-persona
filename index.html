@@ -12,5 +12,16 @@
 
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+    // Check if we were redirected from the 404 page
+    var urlParams = new URLSearchParams(window.location.search);
+    var path = urlParams.get('p');
+    
+    if (path) {
+      // If a path was passed, use the History API to update the URL
+      // without reloading the page.
+      window.history.replaceState(null, null, '/' + 'dark-violet-persona' + '/' + path);
+    }
+    </script>
   </body>
 </html>
